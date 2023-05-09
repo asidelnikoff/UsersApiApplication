@@ -16,7 +16,7 @@ builder.Services.AddControllers().AddJsonOptions(opts =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddSingleton<IUserService, UserService>();
 
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");
 
